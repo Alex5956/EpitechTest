@@ -11,7 +11,7 @@ public:
 	
 	Etudiant(string prenom, string nom, int age,int nbDonut);
 	
-	static void AugmenterNombreDeDonut(Etudiant *etudiant, int nombreDeDonut);
+	static void AugmenterNombreDeDonut(Etudiant &etudiant, int nombreDeDonut);
 	void setNombreDeDonut(int nb);
 	int getNombreDeDonut();
 private:

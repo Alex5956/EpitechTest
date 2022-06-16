@@ -4,19 +4,22 @@
 #include <iostream>
 #include "Etudiant.h"
 #include "Aer.h"
+#include "Encadrant.h"
+#include "Pedago.h"
+
 int nombreDeDonu = 0;
-int Chocolat = 0;
+int chocolat = 0;
 int main()
 {
     std::cout << "Hello World!\n";
 }
 template<class Type>
-void static augmenterNombreDeDonut(Type *entree, int nbDonut) {
+void static augmenterNombreDeDonut(Type &entree, int nbDonut) {
     nombreDeDonu += 1;
    
-    if (dynamic_cast<const Aer*>(entree)) {
+    if (dynamic_cast<const Aer>(entree)) {
         Etudiant::AugmenterNombreDeDonut(entree, nbDonut);
-        if (Chocolat < 17) {
+        if (chocolat < 17) {
             chocolat += 2;
 
         }
@@ -25,7 +28,7 @@ void static augmenterNombreDeDonut(Type *entree, int nbDonut) {
         }
 
     }
-    if (dynamic_cast<const Encadrant*>(entree)) {
+    if (dynamic_cast<const Encadrant>(entree)) {
         Encadrant::augmenterNombreDeDonut(entree, nbDonut);
     }
 

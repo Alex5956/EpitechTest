@@ -8,8 +8,8 @@ Etudiant::Etudiant(string prenom, string nom, int age,int nbDonut) {
 }
 
 
-void Etudiant::AugmenterNombreDeDonut(Etudiant *etudiant, int nombredeDonut) {
-	etudiant->setNombreDeDonut(nombredeDonut + 1);
+void Etudiant::AugmenterNombreDeDonut(Etudiant &etudiant, int nombredeDonut) {
+	etudiant.setNombreDeDonut(nombredeDonut + 1);
 }
 
 void Etudiant::setNombreDeDonut(int nb)
