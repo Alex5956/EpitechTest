@@ -1,0 +1,9 @@
+#include "Pedago.h"
+
+Pedago::Pedago(string prenom, string nom, int age, int nbDonut)
+{
+	this->prenom = prenom;
+	this->nom = nom;
+	this->age = age;
+	this->nbDonut = nbDonut;
+}

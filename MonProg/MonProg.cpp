@@ -6,12 +6,40 @@
 #include "Aer.h"
 #include "Encadrant.h"
 #include "Pedago.h"
+#include "Personne.h"
 
+using namespace std;
+static string genString(int length);
+template<class Type>
+void static augmenterNombreDeDonut(Type& entree, int nbDonut);
 int nombreDeDonu = 0;
 int chocolat = 0;
 int main()
 {
-    std::cout << "Hello World!\n";
+    list<Personne> personnes;
+    for (int i = 0; i < 233; i++) {
+        string prenom = genString(8);
+        string nom = genString(8);
+        int ageEtudiant=rand() % (35 - 18 + 1) + 18;
+        Etudiant unEtudiant(prenom, nom, ageEtudiant, 0);
+        personnes.push_back(unEtudiant);
+    }
+    for (int i = 0; i < 15; i++) {
+        string prenom = genString(8);
+        string nom = genString(8);
+        int agePedago = rand() % (35 - 18 + 1) + 18;
+        Aer monAer(prenom, nom, agePedago, 0);
+        personnes.push_back(monAer);
+        
+    }
+    for (int i = 0; i < 11; i++) {
+        string prenom = genString(8);
+        string nom = genString(8);
+        int agePedago= rand() % (35 - 18 + 1) + 18;
+        Encadrant monEncadrant(prenom, nom, agePedago, 0);
+        personnes.push_back(monEncadrant);
+        
+    }
 }
 template<class Type>
 void static augmenterNombreDeDonut(Type &entree, int nbDonut) {
@@ -33,6 +61,17 @@ void static augmenterNombreDeDonut(Type &entree, int nbDonut) {
     }
 
 }
+static string genString(int length) {
+    static const char alphanum[] =
+        "abcdefghijklmnopqrstuvwxyz";
+    string chaine;
+    chaine.reserve(length);
+    for (int i = 0; i < length; i++) {
+        chaine+= alphanum[rand() % (sizeof(alphanum) - 1)];
+    }
+    return chaine; 
+}
+
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
 // Déboguer le programme : F5 ou menu Déboguer > Démarrer le débogage
 

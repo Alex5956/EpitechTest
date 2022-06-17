@@ -2,23 +2,18 @@
 #include <iostream>
 #include <string>
 #include <list>
-
+#include "Personne.h"
 using namespace std;
 
-class Etudiant
+class Etudiant : public Personne
 {	
 public:
 	
-	Etudiant(string prenom, string nom, int age,int nbDonut);
-	
+	Etudiant();
+	Etudiant(string prenom, string nom, int age, int nbDonut);
 	static void AugmenterNombreDeDonut(Etudiant &etudiant, int nombreDeDonut);
-	void setNombreDeDonut(int nb);
-	int getNombreDeDonut();
-private:
-	
-	string prenom;
-	string nom;
-	int age; 
-	int nbDonut;
+
+
+
 };
 
