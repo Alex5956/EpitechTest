@@ -2,9 +2,7 @@
 #include <iostream>
 #include <string>
 #include <list>
-#include "Personne.h"
-using namespace std;
-
+#include "Personne.h";
 class Etudiant : public Personne
 {	
 public:

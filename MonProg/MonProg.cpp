@@ -8,6 +8,7 @@
 #include "Pedago.h"
 #include "Personne.h"
 
+
 using namespace std;
 static string genString(int length);
 template<class Type>
@@ -39,6 +40,9 @@ int main()
         Encadrant monEncadrant(prenom, nom, agePedago, 0);
         personnes.push_back(monEncadrant);
         
+    }
+    for (list<Personne>::iterator it = personnes.begin(); it != personnes.end(); it++) {
+        cout << it->getPrenom()<< endl; 
     }
 }
 template<class Type>

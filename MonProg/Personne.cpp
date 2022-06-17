@@ -1,5 +1,5 @@
 #include "Personne.h"
-
+using namespace std;
 
 
 
@@ -28,4 +28,34 @@ void Personne::setNombreDeDonut(int nb)
 int Personne::getNombreDeDonut()
 {
     return 0;
+}
+
+string Personne::getPrenom()
+{
+	return this->prenom;
+}
+
+void Personne::setPrenom(string prenom)
+{
+	this->prenom = prenom;
+}
+
+string Personne::getNom()
+{
+	return this->nom;
+}
+
+void Personne::setNom(string nom)
+{
+	this->nom = nom; 
+}
+
+int Personne::getAge()
+{
+	return this->age;
+}
+
+void Personne::setAge(int age)
+{
+	this->age = age;
 }
