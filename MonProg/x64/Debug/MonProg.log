@@ -1,3 +1,4 @@
 ﻿  MonProg.cpp
 C:\Users\alexa\source\repos\MonProg\MonProg\Etudiant.h(5,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
-  MonProg.vcxproj -> C:\Users\alexa\source\repos\MonProg\x64\Debug\MonProg.exe
+C:\Users\alexa\source\repos\MonProg\MonProg\MonProg.cpp(60,11): error C2760: erreur de syntaxe : « . » était inattendu ici ; « <Inconnu>» attendu
+C:\Users\alexa\source\repos\MonProg\MonProg\MonProg.cpp(17,13): message : Le diagnostic s'est produit dans la fonction 'void augmenterNombreDeDonut(Type &,int)' générée par le compilateur

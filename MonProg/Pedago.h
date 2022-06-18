@@ -11,6 +11,7 @@ class Pedago : public Personne
 public:
 	Pedago();
 	Pedago(string prenom, string nom, int age, int nbDonut);
+    void augmenterNombreDeDonut(Pedago& pedago, int nombreDeDonut);
 
 };
 

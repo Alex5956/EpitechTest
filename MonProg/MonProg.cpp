@@ -7,30 +7,34 @@
 #include "Encadrant.h"
 #include "Pedago.h"
 #include "Personne.h"
+#include <type_traits>
+#include <vector>
 
 
 using namespace std;
 static string genString(int length);
-template<class Type>
+template<typename Type>
 void static augmenterNombreDeDonut(Type& entree, int nbDonut);
+template<typename Base, typename T>
+inline bool instanceof(const T* ptr);
 int nombreDeDonu = 0;
 int chocolat = 0;
 int main()
 {
-    list<Personne> personnes;
+    vector <Personne*> personnes;
     for (int i = 0; i < 233; i++) {
         string prenom = genString(8);
         string nom = genString(8);
         int ageEtudiant=rand() % (35 - 18 + 1) + 18;
         Etudiant unEtudiant(prenom, nom, ageEtudiant, 0);
-        personnes.push_back(unEtudiant);
+        personnes.push_back(&unEtudiant);
     }
     for (int i = 0; i < 15; i++) {
         string prenom = genString(8);
         string nom = genString(8);
         int agePedago = rand() % (35 - 18 + 1) + 18;
         Aer monAer(prenom, nom, agePedago, 0);
-        personnes.push_back(monAer);
+        personnes.push_back(&monAer);
         
     }
     for (int i = 0; i < 11; i++) {
@@ -38,19 +42,22 @@ int main()
         string nom = genString(8);
         int agePedago= rand() % (35 - 18 + 1) + 18;
         Encadrant monEncadrant(prenom, nom, agePedago, 0);
-        personnes.push_back(monEncadrant);
+        personnes.push_back(&monEncadrant);
         
     }
-    for (list<Personne>::iterator it = personnes.begin(); it != personnes.end(); it++) {
-        cout << it->getPrenom()<< endl; 
+    for (vector<Personne*>::iterator it = personnes.begin(); it != personnes.end(); it++) {
+        augmenterNombreDeDonut(*it,0);
+        //augmenterNombreDeDonut(it, 0);
     }
 }
-template<class Type>
+template<typename Type>
 void static augmenterNombreDeDonut(Type &entree, int nbDonut) {
     nombreDeDonu += 1;
    
-    if (dynamic_cast<const Aer>(entree)) {
-        Etudiant::AugmenterNombreDeDonut(entree, nbDonut);
+    if (instanceof<Aer>(entree)) {
+       Aer entree = static_cast<Aer>(entree);
+       Aer unAer();
+       Aer.augmenterNombreDeDonut(entree, nbDonut);
         if (chocolat < 17) {
             chocolat += 2;
 
@@ -60,8 +67,11 @@ void static augmenterNombreDeDonut(Type &entree, int nbDonut) {
         }
 
     }
-    if (dynamic_cast<const Encadrant>(entree)) {
-        Encadrant::augmenterNombreDeDonut(entree, nbDonut);
+    if (instanceof<Encadrant>(entree)) {
+        Encadrant entree = static_cast<Encadrant>(entree);
+        Encadrant unEncadrant();
+        unEncadrant.augmenterNombreDeDonut(entree, nbDonut);
+
     }
 
 }
@@ -74,6 +84,10 @@ static string genString(int length) {
         chaine+= alphanum[rand() % (sizeof(alphanum) - 1)];
     }
     return chaine; 
+}
+template<typename Base, typename T>
+inline bool instanceof(const T* ptr) {
+    return dynamic_cast<const Base*>(ptr) != nullptr;
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage

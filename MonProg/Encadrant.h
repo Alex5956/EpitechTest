@@ -9,5 +9,6 @@ class Encadrant : public Pedago
 public:
 	Encadrant();
 	Encadrant(string prenom, string nom, int age, int nbDonut);
+	void augmenterNombreDeDonut(Encadrant& encadrant, int nombreDeDonut);
 };
 

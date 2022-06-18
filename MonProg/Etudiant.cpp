@@ -8,10 +8,10 @@ Etudiant::Etudiant()
 
 Etudiant::Etudiant(string prenom, string nom, int age, int nbDonut)
 {
-	Personne::prenom = prenom; 
-	Personne::nom; 
-	Personne::age = age;
-	Personne::nbDonut; 
+	this->prenom = prenom;
+	this->nom;
+	this->age = age;
+	this->nbDonut;
 }
 
 void Etudiant::AugmenterNombreDeDonut(Etudiant &etudiant, int nombredeDonut) {

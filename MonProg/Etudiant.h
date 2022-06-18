@@ -9,7 +9,7 @@ public:
 	
 	Etudiant();
 	Etudiant(string prenom, string nom, int age, int nbDonut);
-	static void AugmenterNombreDeDonut(Etudiant &etudiant, int nombreDeDonut);
+	void AugmenterNombreDeDonut(Etudiant &etudiant, int nombreDeDonut);
 
 
 
