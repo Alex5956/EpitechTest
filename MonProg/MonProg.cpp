@@ -56,7 +56,7 @@ void static augmenterNombreDeDonut(Type &entree, int nbDonut) {
    
     if (instanceof<Aer>(entree)) {
        Aer entree = static_cast<Aer>(entree);
-       Aer unAer();;
+       Aer unAer{};
        unAer.augmenterNombreDeDonut(entree, nbDonut);
         if (chocolat < 17) {
             chocolat += 2;
@@ -69,7 +69,7 @@ void static augmenterNombreDeDonut(Type &entree, int nbDonut) {
     }
     if (instanceof<Encadrant>(entree)) {
         Encadrant entree = static_cast<Encadrant>(entree);
-        Encadrant unEncadrant();
+        Encadrant unEncadrant{};
         unEncadrant.augmenterNombreDeDonut(entree, nbDonut);
 
     }
