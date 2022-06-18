@@ -56,8 +56,8 @@ void static augmenterNombreDeDonut(Type &entree, int nbDonut) {
    
     if (instanceof<Aer>(entree)) {
        Aer entree = static_cast<Aer>(entree);
-       Aer unAer();
-       Aer.augmenterNombreDeDonut(entree, nbDonut);
+       Aer unAer();;
+       unAer.augmenterNombreDeDonut(entree, nbDonut);
         if (chocolat < 17) {
             chocolat += 2;
 

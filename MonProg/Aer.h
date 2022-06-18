@@ -8,6 +8,7 @@ class Aer :  public Pedago
 public:
 	Aer();
 	Aer(string prenom, string nom, int age, int nbDonut);
-	void augmenterNombreDeDonut(Aer& aer, int nombreDeDonut);
+	
 };
 
+static void augmenterNombreDeDonut(Aer& aer, int nombreDeDonut);

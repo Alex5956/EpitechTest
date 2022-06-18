@@ -1,4 +1,8 @@
 ﻿  MonProg.cpp
 C:\Users\alexa\source\repos\MonProg\MonProg\Etudiant.h(5,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
-C:\Users\alexa\source\repos\MonProg\MonProg\MonProg.cpp(60,11): error C2760: erreur de syntaxe : « . » était inattendu ici ; « <Inconnu>» attendu
-C:\Users\alexa\source\repos\MonProg\MonProg\MonProg.cpp(17,13): message : Le diagnostic s'est produit dans la fonction 'void augmenterNombreDeDonut(Type &,int)' générée par le compilateur
+C:\Users\alexa\source\repos\MonProg\MonProg\MonProg.cpp(60,14): error C2228: la partie gauche de '.augmenterNombreDeDonut' doit avoir un class/struct/union
+C:\Users\alexa\source\repos\MonProg\MonProg\MonProg.cpp(49): message : voir la référence à l'instanciation de la fonction modèle 'void augmenterNombreDeDonut<Personne*>(Type &,int)' en cours de compilation
+          with
+          [
+              Type=Personne *
+          ]

@@ -13,9 +13,8 @@ Aer::Aer(string prenom, string nom, int age, int nbDonut)
 	this->nbDonut = nbDonut;
 }
 
-void Aer::augmenterNombreDeDonut(Aer& aer, int nombreDeDonut)
+
+void augmenterNombreDeDonut(Aer& aer, int nombreDeDonut)
 {
-	
-		aer.setNombreDeDonut(nbDonut + 1);
-	
+	aer.setNombreDeDonut(nombreDeDonut + 1);
 }
