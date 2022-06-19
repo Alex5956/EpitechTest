@@ -22,7 +22,7 @@ int nbDonutTotal = 0;
 int main()
 {
     vector <Personne*> personnes;
-    for (int i = 0; i < 233; i++) {
+    for (int i = 0; i < 234; i++) {
         string prenom = genString(8);
         string nom = genString(8);
         int ageEtudiant=rand() % (35 - 18 + 1) + 18;

@@ -3,8 +3,9 @@
 #include <iostream>
 #include <string>
 #include "Personne.h"
+#include "Etudiant.h"
 
-class Aer :  public Pedago
+class Aer :  public Pedago 
 {
 public:
 	Aer();
