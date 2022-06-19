@@ -138,6 +138,7 @@
     <ClInclude Include="Aer.h" />
     <ClInclude Include="Encadrant.h" />
     <ClInclude Include="Etudiant.h" />
+    <ClInclude Include="nbDonutTotal.h" />
     <ClInclude Include="Pedago.h" />
     <ClInclude Include="Personne.h" />
   </ItemGroup>

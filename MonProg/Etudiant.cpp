@@ -14,6 +14,7 @@ Etudiant::Etudiant(string prenom, string nom, int age, int nbDonut)
 	this->nbDonut;
 }
 
-void Etudiant::AugmenterNombreDeDonut(Etudiant &etudiant, int nombredeDonut) {
-	etudiant.setNombreDeDonut(nombredeDonut + 1);
+void Etudiant::augmenterNombreDeDonut(Etudiant &etudiant) {
+	etudiant.setNombreDeDonut(etudiant.nbDonut + 1);
+	
 }

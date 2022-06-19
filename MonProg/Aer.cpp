@@ -1,6 +1,4 @@
 #include "Aer.h"
-using namespace std; 
-
 Aer::Aer()
 {
 }
@@ -14,7 +12,10 @@ Aer::Aer(string prenom, string nom, int age, int nbDonut)
 }
 
 
-void augmenterNombreDeDonut(Aer& aer, int nombreDeDonut)
+
+void Aer::augmenterNombreDeDonut(Aer& aer)
 {
-	aer.setNombreDeDonut(nombreDeDonut + 1);
+	aer.setNombreDeDonut(aer.nbDonut+ 1);
+	
+	
 }

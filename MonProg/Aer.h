@@ -1,14 +1,14 @@
 #pragma once
-#include "Etudiant.h"
 #include "Pedago.h"
+#include <iostream>
+#include <string>
 #include "Personne.h"
 
-class Aer :  public Pedago 
+class Aer :  public Pedago
 {
 public:
 	Aer();
 	Aer(string prenom, string nom, int age, int nbDonut);
+	void augmenterNombreDeDonut(Aer& aer);
 	
 };
-
-static void augmenterNombreDeDonut(Aer& aer, int nombreDeDonut);

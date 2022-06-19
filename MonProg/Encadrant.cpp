@@ -12,7 +12,8 @@ Encadrant::Encadrant(string prenom, string nom, int age, int nbDonut)
 	this->nbDonut = nbDonut;
 }
 
- void Encadrant::augmenterNombreDeDonut(Encadrant& encadrant, int nombreDeDonut)
+ void Encadrant::augmenterNombreDeDonut(Encadrant& encadrant)
 {
-	encadrant.setNombreDeDonut( this->nbDonut+ 1);
+	encadrant.setNombreDeDonut(encadrant.nbDonut+1);
+	
 }

@@ -3,8 +3,6 @@ using namespace std;
 
 
 
-
-
 Personne::Personne()
 {
 	this->prenom = "Alexandre";
@@ -59,3 +57,4 @@ void Personne::setAge(int age)
 {
 	this->age = age;
 }
+

@@ -13,9 +13,10 @@ Pedago::Pedago(string prenom, string nom, int age, int nbDonut)
 	this->nbDonut = nbDonut;
 }
 
- void Pedago::augmenterNombreDeDonut(Pedago& pedago, int nombreDeDonut)
+ void Pedago::augmenterNombreDeDonut(Pedago& pedago)
 {
-	pedago.setNombreDeDonut(nbDonut+ 1);
+	pedago.setNombreDeDonut(pedago.nbDonut+ 1);
+	
 }
 
 

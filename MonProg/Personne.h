@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string>
+#include "nbDonutTotal.h"
 using namespace std;
 class Personne
 {
@@ -16,10 +17,14 @@ public:
 	void setNom(string nom);
 	int getAge();
 	void setAge(int age);
+	
+	
 protected:
 	string prenom;
 	string nom;
 	int age;
 	int nbDonut;
+	
+	
 };
-
+ 

@@ -14,11 +14,11 @@
 using namespace std;
 static string genString(int length);
 template<typename Type>
-void static augmenterNombreDeDonut(Type& entree, int nbDonut);
+void static augmenterNombreDeDonut(Type& entree);
 template<typename Base, typename T>
 inline bool instanceof(const T* ptr);
-int nombreDeDonu = 0;
 int chocolat = 0;
+int nbDonutTotal = 0;
 int main()
 {
     vector <Personne*> personnes;
@@ -46,18 +46,22 @@ int main()
         
     }
     for (vector<Personne*>::iterator it = personnes.begin(); it != personnes.end(); it++) {
-        augmenterNombreDeDonut(*it,0);
+        augmenterNombreDeDonut(*it);
         //augmenterNombreDeDonut(it, 0);
     }
+    cout << nbDonutTotal<< endl;
 }
 template<typename Type>
-void static augmenterNombreDeDonut(Type &entree, int nbDonut) {
-    nombreDeDonu += 1;
-   
+void static augmenterNombreDeDonut(Type &entree) {
+    cout << "1) nbDonuTotal vaut "<< nbDonutTotal << endl; 
+    cout << "1) chocolatPrevu vaut " << chocolat << endl;
+    nbDonutTotal += 1;
     if (instanceof<Aer>(entree)) {
        Aer entree = static_cast<Aer>(entree);
        Aer unAer{};
-       unAer.augmenterNombreDeDonut(entree, nbDonut);
+       unAer.augmenterNombreDeDonut(entree);
+       cout << "2) nbDonuTotal vaut " << nbDonutTotal << endl;
+       cout << "2) chocolatPrevu vaut " << chocolat << endl;
         if (chocolat < 17) {
             chocolat += 2;
 
@@ -70,7 +74,9 @@ void static augmenterNombreDeDonut(Type &entree, int nbDonut) {
     if (instanceof<Encadrant>(entree)) {
         Encadrant entree = static_cast<Encadrant>(entree);
         Encadrant unEncadrant{};
-        unEncadrant.augmenterNombreDeDonut(entree, nbDonut);
+        unEncadrant.augmenterNombreDeDonut(entree);
+        cout << "3) nbDonuTotal vaut " << nbDonutTotal << endl;
+        cout << "3) chocolatPrevu vaut " << chocolat << endl;
 
     }
 
@@ -87,7 +93,7 @@ static string genString(int length) {
 }
 template<typename Base, typename T>
 inline bool instanceof(const T* ptr) {
-    return dynamic_cast<const Base*>(ptr) != nullptr;
+    return static_cast<const Base*>(ptr) != nullptr;
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
